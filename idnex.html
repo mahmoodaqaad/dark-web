@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>protofolio</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="portfolio_site_img/logo.png">
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="portfolio_site_img/logo.png" alt="" class="logo">
+            <ul>
+                <li>HOME</li>
+                <li>ABOUT</li>
+                <li>PORTFOLIO</li>
+                <li>SERVICES</li>
+                <li>HIRE ME</li>
+                <li><img src="portfolio_site_img/moon.png" alt="" class="light"></li>
+            </ul>
+        </header>
+        <div class="landing">
+            <div class="info">
+                <h1>I'm <span>Mahmood</span></h1>
+                <p>This is my offcail portfolio website to showcase my all work related to web development and ui design
+                </p>
+                <div class="button">Download</div>
+            </div>
+            <div class="images">
+                <img src="portfolio_site_img/pattern.png" alt="" class="overlay">
+                <img src="portfolio_site_img/person.png" alt="" class="person">
+            </div>
+        </div>
+        <ul class="links">
+            <li>
+                <a class="whatsapp" href="https://wa.me/+970599923041" target="_blank"><i class="fab fa-whatsapp"></i>
+                </a>
+
+            </li>
+            <li>
+
+                <a class="youtube" href="https://youtube.com/@user-lf6oy5cq8s" target="_blank">
+                    <i class="fab fa-youtube"></i></a>
+
+
+
+            </li>
+
+            <li>
+                <a href="https://www.instagram.com/mahmood.32004/" target="_blank" class="instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a class="facebook" href="https://www.facebook.com/profile.php?id=100022618519064" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script>
+        let trnsform = document.querySelector("img.light");
+        let container = document.querySelector(".container");
+        let btn = document.querySelector(".landing .info .button")
+        let x = true
+        trnsform.onclick = () => {
+            if (x == true) {
+                trnsform.src = "portfolio_site_img/sun.png"
+                x = false
+                document.documentElement.style.setProperty("--color", "white")
+                container.style.backgroundColor = "#222"
+                btn.style.color = "black"
+            }
+            else {
+                x = true
+                trnsform.src = "portfolio_site_img/moon.png"
+                document.documentElement.style.setProperty("--color", "black")
+                container.style.backgroundColor = "#f0fafe"
+                btn.style.color = "white"
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
